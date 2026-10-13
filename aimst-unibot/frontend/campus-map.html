@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIMST University Interactive Campus Map</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root{--navy:#17345b;--blue:#2563eb;--gold:#f4c542;--paper:#f5f7fb;--ink:#182230}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+header{background:linear-gradient(120deg,#102747,#24558a);color:white;padding:22px clamp(16px,4vw,42px)}
+h1{margin:0 0 6px;font-size:clamp(22px,3vw,32px)}header p{margin:0;opacity:.9}
+main{max-width:1400px;margin:auto;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px}
+.panel{background:white;border:1px solid #dce3ec;border-radius:16px;box-shadow:0 5px 18px #19395c0b;overflow:hidden}
+.map-top{padding:12px 15px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-bottom:1px solid #e7edf4}
+input{flex:1;min-width:180px;border:1px solid #cbd5e1;border-radius:9px;padding:10px 12px;font-size:14px}
+button{cursor:pointer;font:inherit} .plain{border:1px solid #d4dce7;background:white;border-radius:9px;padding:9px 12px}
+.map-wrap{position:relative;width:100%;line-height:0;background:#e7edf4}
+.map-wrap img{display:block;width:100%;height:auto}
+.marker{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;border:2px solid white;background:var(--blue);color:white;font-weight:800;box-shadow:0 2px 9px #10274770;line-height:1;display:grid;place-items:center;transition:transform .15s,background .15s;z-index:2}
+.marker:hover,.marker:focus{transform:translate(-50%,-50%) scale(1.18);background:#d97706;outline:3px solid #f4c54299}
+.marker.active{background:#d97706;outline:3px solid #f4c54299}
+.map-foot{padding:10px 14px;color:#64748b;font-size:12px;line-height:1.4}
+.side-head{padding:16px 16px 12px;border-bottom:1px solid #e7edf4}.side-head h2{font-size:18px;margin:0 0 4px}.side-head p{font-size:12px;color:#64748b;margin:0}
+.place-list{padding:8px;max-height:410px;overflow:auto}
+.place-btn{width:100%;display:flex;align-items:flex-start;gap:10px;text-align:left;border:0;background:white;padding:10px;border-radius:10px}
+.place-btn:hover,.place-btn.selected{background:#eff6ff}
+.num{flex:0 0 28px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e4edff;color:#1d4ed8;font-weight:800;font-size:13px}
+.place-btn strong{display:block;font-size:13px;margin:1px 0 4px}.place-btn small{display:block;color:#64748b;font-size:11px;line-height:1.35}
+.detail{border-top:1px solid #e7edf4;padding:16px;min-height:150px}.detail h3{margin:0 0 8px;font-size:18px}.detail p{margin:0 0 10px;font-size:13px;line-height:1.5}.detail ul{margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.55}
+.tip{font-size:12px;color:#64748b;line-height:1.5;padding:0 16px 16px}
+@media(max-width:850px){main{grid-template-columns:1fr;padding:10px}.place-list{max-height:260px}.detail{min-height:120px}}
+@media print{header{background:#17345b!important;-webkit-print-color-adjust:exact}main{display:block}.side{margin-top:14px}.map-top{display:none}.place-list{max-height:none}}
+</style>
+</head>
+<body>
+<header><h1>AIMST University · Interactive Campus Map</h1><p>Tap a numbered marker or choose a location from the list to explore campus facilities.</p></header>
+<main>
+<section class="panel">
+ <div class="map-top"><input id="search" placeholder="Search a building, department or facility…" aria-label="Search locations"><button class="plain" id="reset">Show all</button><button class="plain" onclick="window.print()">Print map</button></div>
+ <div class="map-wrap" id="map">
+  <img alt="Aerial map of AIMST University campus with buildings and roads" src="assets/campus_map.png">
+ </div>
+ <div class="map-foot">Map markers follow the numbered locations in the supplied image. Building details are based on the information provided; please verify any room-level details with the university.</div>
+</section>
+<aside class="panel side">
+ <div class="side-head"><h2>Campus locations</h2><p id="count">13 locations</p></div>
+ <div class="place-list" id="list"></div>
+ <div class="detail" id="detail"><h3>Welcome!</h3><p>Select a numbered marker on the map or a location in this list to see the facilities and departments.</p></div>
+</aside>
+</main>
+<script>
+const places=[
+{n:1,name:"Admin Block",x:45.8,y:15.0,items:["Finance Department","Exam Division","Marketing Department","Great Hall","Basement Exam Hall","IT Department","HR Department","School of General & Foundation Studies staff room"]},
+{n:2,name:"Library & Study Area",x:49.4,y:46.5,items:["Library","Study Area","Nursing classroom","Physiotherapy staff room and lab","Classroom"]},
+{n:3,name:"Faculty of Dentistry",x:64.3,y:45.2,items:["Dentistry classroom","Dentist clinic","Dentist lab","Lecture theatre"]},
+{n:4,name:"Faculty of Business & Management / Allied Health Professions",x:74.2,y:42.4,items:["Faculty of Business & Management","Faculty of Allied Health Professions"]},
+{n:5,name:"Faculty of Medicine / Pharmacy / Applied Science",x:30.1,y:43.8,items:["Faculty of Medicine","Faculty of Pharmacy","Faculty of Applied Science","Anatomy lab","Science lab","Classroom","Lecture theatre"]},
+{n:6,name:"Cafeteria",x:49.6,y:67.2,items:["Cafeteria","Student Affairs Department","Student Cash & Carry"]},
+{n:7,name:"Jerai Hostel (Female)",x:90.2,y:56.7,items:["Female student hostel"]},
+{n:8,name:"Keriang Hostel (Female)",x:77.5,y:61.9,items:["Female student hostel"]},
+{n:9,name:"Teratai Hostel (Female)",x:67.2,y:72.2,items:["Female student hostel"]},
+{n:10,name:"Anggerik Hostel (Male)",x:34.2,y:73.0,items:["Male student hostel"]},
+{n:11,name:"Bunga Raya Hostel (Male)",x:22.4,y:63.3,items:["Male student hostel"]},
+{n:12,name:"Staff Hostel",x:30.8,y:82.5,items:["Staff accommodation"]},
+{n:13,name:"Sports Complex",x:68.1,y:4.2,items:["Sports and recreation facilities"]}
+];
+const map=document.getElementById('map'),list=document.getElementById('list'),detail=document.getElementById('detail'),search=document.getElementById('search');
+const markers=new Map();
+places.forEach(p=>{const b=document.createElement('button');b.className='marker';b.textContent=p.n;b.title=p.name;b.setAttribute('aria-label',p.n+'. '+p.name);b.style.left=p.x+'%';b.style.top=p.y+'%';b.onclick=()=>select(p.n);map.appendChild(b);markers.set(p.n,b)});
+function select(n){const p=places.find(x=>x.n===n);if(!p)return;markers.forEach((b,k)=>b.classList.toggle('active',k===n));document.querySelectorAll('.place-btn').forEach(b=>b.classList.toggle('selected',Number(b.dataset.n)===n));detail.innerHTML='<h3>'+p.n+'. '+p.name+'</h3><p>Facilities and departments:</p><ul>'+p.items.map(x=>'<li>'+x+'</li>').join('')+'</ul>';if(window.innerWidth<850)detail.scrollIntoView({behavior:'smooth',block:'nearest'})}
+function render(q=''){list.innerHTML='';const filtered=places.filter(p=>(p.name+' '+p.items.join(' ')).toLowerCase().includes(q.toLowerCase()));document.getElementById('count').textContent=filtered.length+' of 13 locations';places.forEach(p=>{markers.get(p.n).style.display=filtered.includes(p)?'grid':'none'});filtered.forEach(p=>{const b=document.createElement('button');b.className='place-btn';b.dataset.n=p.n;b.innerHTML='<span class="num">'+p.n+'</span><span><strong>'+p.name+'</strong><small>'+p.items.slice(0,3).join(' · ')+(p.items.length>3?' · …':'')+'</small></span>';b.onclick=()=>select(p.n);list.appendChild(b)})}
+search.addEventListener('input',()=>render(search.value));document.getElementById('reset').onclick=()=>{search.value='';render();markers.forEach(b=>b.classList.remove('active'));detail.innerHTML='<h3>Welcome!</h3><p>Select a numbered marker on the map or a location in this list to see the facilities and departments.</p>'};render();
+</script>
+</body>
+</html>

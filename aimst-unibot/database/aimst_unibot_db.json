@@ -1,0 +1,539 @@
+{
+  "courses": [
+    {
+      "course_id": "CRS-MIS",
+      "course_name": "BSc. (Hons) Management Information Systems",
+      "faculty": "Faculty of Business and Management",
+      "duration": "3 Years"
+    },
+    {
+      "course_id": "CRS-NUR",
+      "course_name": "Bachelor of Nursing (Hons)",
+      "faculty": "Faculty of Nursing & Allied Health Professions",
+      "duration": "4 Years"
+    },
+    {
+      "course_id": "CRS-MBBS",
+      "course_name": "Bachelor of Medicine & Bachelor of Surgery (MBBS)",
+      "faculty": "Faculty of Medicine",
+      "duration": "5 Years"
+    },
+    {
+      "course_id": "CRS-BDS",
+      "course_name": "Bachelor of Dental Surgery (BDS)",
+      "faculty": "Faculty of Dentistry",
+      "duration": "5 Years"
+    },
+    {
+      "course_id": "CRS-PHARM",
+      "course_name": "Bachelor of Pharmacy (Hons)",
+      "faculty": "Faculty of Pharmacy",
+      "duration": "4 Years"
+    }
+  ],
+  "students": [
+    {
+      "id": "B25030014",
+      "name": "Ananya Sharma",
+      "email": "ananya.s@student.aimst.edu.my",
+      "faculty": "Faculty of Engineering & Computer Technology",
+      "course": "Diploma in Information Technology",
+      "isHosteller": true,
+      "hostelBlock": "Teratai",
+      "staircase": "Staircase 2",
+      "roomNo": "Room 108",
+      "outstandingFee": 0,
+      "examTimetable": "May 28 – June 4, 2026 (Science Lab 2)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download.",
+      "level": "Diploma"
+    },
+    {
+      "id": "B25030013",
+      "name": "Muhammad Ammar",
+      "email": "ammar.m@student.aimst.edu.my",
+      "faculty": "Faculty of Engineering & Computer Technology",
+      "course": "BSc. (Hons) Computer Science",
+      "isHosteller": false,
+      "hostelBlock": "",
+      "staircase": "",
+      "roomNo": "",
+      "outstandingFee": 0,
+      "examTimetable": "May 25 – June 2, 2026 (Computer Lab 4)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    },
+    {
+      "id": "B25030005",
+      "name": "Jason Lee Wei Lun",
+      "email": "jason.lee@student.aimst.edu.my",
+      "faculty": "Faculty of Pharmacy",
+      "course": "Bachelor of Pharmacy with Honours",
+      "level": "Degree",
+      "isHosteller": false,
+      "hostelBlock": "",
+      "staircase": "",
+      "roomNo": "",
+      "outstandingFee": 0,
+      "examTimetable": "June 5 – June 12, 2026 (Pharma Lab 1)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    },
+    {
+      "id": "B25030006",
+      "name": "Priya Darshini",
+      "email": "priya.d@student.aimst.edu.my",
+      "faculty": "Faculty of Dentistry",
+      "course": "Bachelor of Dental Surgery",
+      "level": "Degree",
+      "isHosteller": true,
+      "hostelBlock": "Block D",
+      "staircase": "Staircase 3",
+      "roomNo": "Room 202 (Twin Sharing)",
+      "outstandingFee": 2500,
+      "examTimetable": "June 2 – June 8, 2026 (Dental Clinic Hall)",
+      "examSlipStatus": "Blocked",
+      "examSlipReason": "Outstanding tuition fee balance of RM 2,500.00 pending payment."
+    },
+    {
+      "id": "B25030012",
+      "name": "Priya Darshini",
+      "email": "priya.d@student.aimst.edu.my",
+      "faculty": "Faculty of Dentistry",
+      "course": "Bachelor of Dental Surgery (BDS)",
+      "isHosteller": true,
+      "hostelBlock": "Block D",
+      "staircase": "Staircase 3",
+      "roomNo": "Room 202",
+      "outstandingFee": 2500,
+      "examTimetable": "June 2 – June 8, 2026 (Dental Clinic Hall)",
+      "examSlipStatus": "Blocked",
+      "examSlipReason": "Outstanding tuition fee balance of RM 2500.00 pending payment.",
+      "level": "Degree"
+    },
+    {
+      "id": "B25030011",
+      "name": "Jason Lee Wei Lun",
+      "email": "jason.lee@student.aimst.edu.my",
+      "faculty": "Faculty of Pharmacy",
+      "course": "Bachelor of Pharmacy (Hons)",
+      "isHosteller": false,
+      "hostelBlock": "",
+      "staircase": "",
+      "roomNo": "",
+      "outstandingFee": 0,
+      "examTimetable": "June 5 – June 12, 2026 (Pharma Lab 1)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    },
+    {
+      "id": "B25030010",
+      "name": "Drishya Menon",
+      "email": "drishya.m@student.aimst.edu.my",
+      "faculty": "Faculty of Medicine",
+      "course": "Bachelor of Medicine & Bachelor of Surgery (MBBS)",
+      "isHosteller": true,
+      "hostelBlock": "Block M",
+      "staircase": "Staircase 1",
+      "roomNo": "Room 104 (Single)",
+      "outstandingFee": 0,
+      "examTimetable": "June 1 – June 10, 2026 (Medical Hall 2)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    },
+    {
+      "id": "B25030023",
+      "name": "Kavyasre Kobinathan",
+      "email": "kavyasre@student.aimst.edu.my",
+      "faculty": "Faculty of Business & Management",
+      "level": "Degree",
+      "course": "Bachelor of Science (Hons) Management Information Systems",
+      "isHosteller": true,
+      "hostelBlock": "Keriang",
+      "staircase": "Staircase 2",
+      "roomNo": "Room 108",
+      "outstandingFee": 0.1,
+      "examTimetable": "May 12 – May 20, 2026 (Exam Hall 1, Block C)",
+      "examSlipStatus": "Not Available",
+      "examSlipReason": "Exam slip is currently not available. Please contact the Examination Division."
+    },
+    {
+      "id": "B25030002",
+      "name": "Siti Nurhaliza",
+      "email": "siti.nurhaliza@student.aimst.edu.my",
+      "faculty": "Faculty of Allied Health Professions",
+      "level": "Degree",
+      "course": "Bachelor in Nursing Science (Honours)",
+      "isHosteller": false,
+      "hostelBlock": "",
+      "staircase": "",
+      "roomNo": "",
+      "outstandingFee": 0,
+      "examTimetable": "May 5 – May 10, 2026 (Nursing Clinical Lab 3, Block E)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    },
+    {
+      "id": "B25030001",
+      "name": "Ahmad Firdaus",
+      "email": "ahmad.firdaus@student.aimst.edu.my",
+      "faculty": "School of General & Foundation Studies",
+      "level": "Foundation",
+      "course": "Foundation in Business",
+      "isHosteller": true,
+      "hostelBlock": "Block B",
+      "staircase": "Staircase 2",
+      "roomNo": "Room 204 (Twin Sharing)",
+      "outstandingFee": 0,
+      "examTimetable": "May 12 – May 20, 2026 (Exam Hall 1, Block C)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    },
+    {
+      "id": "B25030004",
+      "name": "Drishya Menon",
+      "email": "drishya.m@student.aimst.edu.my",
+      "faculty": "Faculty of Medicine",
+      "level": "Degree",
+      "course": "Bachelor of Medicine and Bachelor of Surgery (MBBS)",
+      "isHosteller": true,
+      "hostelBlock": "Block M",
+      "staircase": "Staircase 1",
+      "roomNo": "Room 104 (Single Room)",
+      "outstandingFee": 0,
+      "examTimetable": "June 1 – June 10, 2026 (Medical Hall 2)",
+      "examSlipStatus": "Available",
+      "examSlipReason": "All fees cleared. Slip ready for instant download."
+    }
+  ],
+  "knowledgeBase": [
+    {
+      "id": "kb-101",
+      "question": "When is the exam timetable released?",
+      "keywords": [
+        "exam",
+        "timetable",
+        "schedule",
+        "release",
+        "date",
+        "examination"
+      ],
+      "category": "Examination",
+      "response": "The examination timetable is published on the university portal under the Examination section, typically two (2) weeks before the exam period commences.Visit https://cms.aimst.edu.my to view or download the timetable."
+    },
+    {
+      "id": "kb-102",
+      "question": "How can I view or download my exam slip?",
+      "keywords": [
+        "exam",
+        "slip",
+        "download",
+        "view",
+        "release",
+        "hall",
+        "docket"
+      ],
+      "category": "Examination",
+      "response": "If there is no outstanding tuition fee, you can view and download your exam slip on the CMS Student Portal. If your slip is unavailable, the Exam Division may still be updating your record."
+    },
+    {
+      "id": "kb-103",
+      "question": "When will semester exam results be announced?",
+      "keywords": [
+        "result",
+        "grade",
+        "gpa",
+        "cgpa",
+        "marks",
+        "transcript"
+      ],
+      "category": "Examination",
+      "response": "Exam results are released within 4 to 6 weeks after the examination period concludes. You can check your academic transcript directly on the Student Portal."
+    },
+    {
+      "id": "kb-104",
+      "question": "How do I pay my tuition fees?",
+      "keywords": [
+        "tuition",
+        "fee",
+        "pay",
+        "payment",
+        "banking",
+        "finance",
+        "money"
+      ],
+      "category": "Finance",
+      "response": "Tuition fees can be paid via online banking transfer, credit/debit card through the Aimst online payment gateway, or physically at the Finance Cashier Office (Admin Block, Ground Floor). Deadlines are announced each semester."
+    },
+    {
+      "id": "kb-105",
+      "question": "What happens if tuition fee payment is delayed?",
+      "keywords": [
+        "late",
+        "overdue",
+        "deadline",
+        "penalty",
+        "due",
+        "unpaid"
+      ],
+      "category": "Finance",
+      "response": "Delayed payments may incur a late payment penalty fee and prevent exam slip generation. Please contact the Finance Office if you require an installment plan."
+    },
+    {
+      "id": "kb-105_balance",
+      "question": "How much is my outstanding fee?",
+      "keywords": [
+        "balance",
+        "owe",
+        "outstanding",
+        "much",
+        "amount"
+      ],
+      "category": "Finance",
+      "response": "Please provide your student matric number to check your outstanding tuition fee balance."
+    },
+    {
+      "id": "kb-106",
+      "question": "How do I apply for hostel accommodation?",
+      "keywords": [
+        "hostel",
+        "apply",
+        "accommodation",
+        "room",
+        "stay",
+        "dormitory"
+      ],
+      "category": "Hostel",
+      "response": "Hostel applications open at the beginning of every New Intake."
+    },
+    {
+      "id": "kb-107",
+      "question": "What are the hostel fees and payment details?",
+      "keywords": [
+        "hostel",
+        "fee",
+        "rent",
+        "cost",
+        "price",
+        "room rates",
+        "accommodation"
+      ],
+      "category": "Hostel",
+      "response": "Hostel fees vary by room type. 4-sharing room rate is RM 3180/sem, 3-sharing room(RM3480/sem), 2-sharing room(RM3780/sem) ,2-sharing room with AC (RM4380/sem)."
+    },
+    {
+      "id": "kb-107_room",
+      "question": "Where is my hostel room details?",
+      "keywords": [
+        "room",
+        "block",
+        "number",
+        "where",
+        "details"
+      ],
+      "category": "Hostel",
+      "response": "Please provide your student ID so I can look up your assigned hostel block, staircase, and room number."
+    },
+    {
+      "id": "kb-115",
+      "question": "Can Non-Hostellers apply for hostel?",
+      "keywords": [
+        "hostel",
+        "apply",
+        "accommodation",
+        "room",
+        "stay",
+        "dorm",
+        "non-hosteller"
+      ],
+      "category": "Hostel",
+      "response": "Students need to contact SAD Department for hostel information. After consulting SAD Department, student needs to visit Hostel Warden Office."
+    },
+    {
+      "id": "kb-108",
+      "question": "How do I apply for an AIMST Car or Motorcycle sticker?",
+      "keywords": [
+        "vehicle",
+        "car",
+        "motorcycle",
+        "sticker",
+        "parking",
+        "pass"
+      ],
+      "category": "Student Services",
+      "response": "Vehicle stickers can be requested at the Student Affairs Department (SAD) Cafeteria left wing 1st floor after submitting copies of vehicle sticker form, MyKad Identity Number (ic), student ID card and valid driving license."
+    },
+    {
+      "id": "kb-109",
+      "question": "Where do I apply for PTPTN loan or any related loans?",
+      "keywords": [
+        "ptptn",
+        "mied loan",
+        "loan",
+        "financial",
+        "aid",
+        "funding"
+      ],
+      "category": "Student Services",
+      "response": "PTPTN loan processing and university scholarship applications are handled by the Finance Department (Location: Admin Block, 3rd Floor) Also student can apply PTPTN Loans via online https://www.ptptn.gov.my. Need to wait for government date to open the application."
+    },
+    {
+      "id": "kb-113",
+      "question": "How do I apply for AIMST scholarships?",
+      "keywords": [
+        "scholarship",
+        "financial",
+        "aid",
+        "funding",
+        "rebate",
+        "merit"
+      ],
+      "category": "Scholarship",
+      "response": "A variety of scholarships are available for AIMST University students, including Merit Scholarships, Need-Based Aid, and Faculty Rebates. For details and application guidance, please visit the AIMST Finance Department (Admin Block, 3rd Floor)."
+    },
+    {
+      "id": "kb-110",
+      "question": "What are the Central Library operating hours?",
+      "keywords": [
+        "library",
+        "hours",
+        "timing",
+        "open",
+        "close",
+        "weekend"
+      ],
+      "category": "Student Services",
+      "response": "Library hours: Mon–Fri 8:00 AM – 10:00 PM, Sat 9:00 AM – 6:00 PM. Sun & Public Holidays: Closed."
+    },
+    {
+      "id": "kb-111",
+      "question": "How do I register for courses for the new semester?",
+      "keywords": [
+        "course",
+        "registration",
+        "enroll",
+        "register",
+        "subject",
+        "enrollment"
+      ],
+      "category": "Academic",
+      "response": "Course registration opens 3 weeks before the new semester on the Student Portal or assigned Whatsapp Group. Please consult your Course Coordinator prior to finalizing your registration."
+    },
+    {
+      "id": "kb-112",
+      "question": "How to contact information for Student Affairs Department (SAD)?",
+      "keywords": [
+        "contact",
+        "sad",
+        "student",
+        "affair",
+        "phone",
+        "email",
+        "location"
+      ],
+      "category": "Student Services",
+      "response": "Student Affairs Department (SAD): Block A, AIMST Campus, Semeling, 08100 Bedong, Kedah. Email: studentaffairs@aimst.edu.my | Tel: +60 4-429 8000."
+    },
+    {
+      "id": "kb-114",
+      "question": "What are the Study Area operating hours?",
+      "keywords": [
+        "study area",
+        "hours",
+        "timing",
+        "open",
+        "close",
+        "weekend",
+        "Saturday",
+        "Sunday"
+      ],
+      "category": "Study Area",
+      "response": "All day 7:00 AM – 12:00 AM (Midnight) study areas are open in AIMST University. During public holidays, study area is closed."
+    },
+    {
+      "id": "kb-118",
+      "question": "What are the facilities available in AIMST University?",
+      "keywords": [
+        "facilities",
+        "hours",
+        "places",
+        "open",
+        "close",
+        "weekend",
+        "gym",
+        "badminton",
+        "tennis",
+        "swimming",
+        "basketball"
+      ],
+      "category": "Facilities",
+      "response": "AIMST University features comprehensive facilities including Central Library, Dental Library, Lecture Halls, Tutorial rooms, Student Common Area, Cafeteria, Sports Complex (Gym, Swimming pool, Badminton, Tennis, Basketball, Netball, Squash, Table Tennis)."
+    },
+    {
+      "id": "kb-119",
+      "question": "Where is the AIMST Student Health Clinic and what are the operating hours?",
+      "keywords": [
+        "clinic",
+        "health",
+        "doctor",
+        "medical",
+        "sick",
+        "first aid",
+        "hospital"
+      ],
+      "category": "Clinic",
+      "response": "The AIMST Student Health Clinic is located at the Student Center (Cafeteria) Ground Floor. Operating hours: Mon–Fri 8:30 AM – 5:00 PM. Provides basic outpatient consultation and emergency first aid for registered students."
+    },
+    {
+      "id": "kb-120",
+      "question": "What are the cafeteria operating hours and food choices?",
+      "keywords": [
+        "cafeteria",
+        "canteen",
+        "food",
+        "dining",
+        "eating",
+        "lunch",
+        "breakfast",
+        "halal",
+        "vegetarian"
+      ],
+      "category": "Cafeteria",
+      "response": "The AIMST Student Cafeteria is located at Student Center (Ground Floor). Operating hours: Mon–Sat 7:00 AM – 9:00 PM. Offers Halal, Indian, Chinese, Western, and Vegetarian food stalls."
+    },
+    {
+      "id": "kb-121",
+      "question": "Where is the AIMST University Campus Map or block locations?",
+      "keywords": [
+        "map",
+        "location",
+        "block",
+        "blocks",
+        "campus map",
+        "direction",
+        "building"
+      ],
+      "category": "Facilities",
+      "response": "<div style='margin-bottom:0.75rem; border-radius:8px; overflow:hidden; border:1px solid rgba(2,132,199,0.3);'><img src='assets/campus_map.png' alt='AIMST Campus Map' style='width:100%; max-height:200px; object-fit:cover; display:block; cursor:pointer;' onclick='window.openCampusMapModal()' title='Click to enlarge map' /></div>Here is the official <strong>AIMST University Campus Layout & Block Directory</strong>.<br/><br/>📍 <strong>Key Locations:</strong><br/>• <strong>1. Admin Block:</strong> Finance, Exam, Marketing, IT, HR<br/>• <strong>2. Library & Study Area:</strong> Library, Nursing & Physio Labs<br/>• <strong>3. Faculty Of Dentistry:</strong> Clinics & Labs<br/>• <strong>4. FBM & FAHP:</strong> Business & Allied Health<br/>• <strong>5. Medicine, Pharmacy, Science:</strong> Anatomy & Science Labs<br/>• <strong>6. Cafeteria:</strong> Student Affairs (SAD)<br/>• <strong>7-12. Hostels:</strong> Jerai, Keriang, Teratai, Anggerik, Bunga Raya, Staff<br/>• <strong>13. Sport Complex</strong><br/><br/><button class='pill-btn open-map-btn' onclick='window.openCampusMapModal()' style='background:#0284c7; color:#fff; padding:0.5rem 1rem; border-radius:6px; font-weight:600; cursor:pointer;'><i class='fas fa-map-marked-alt'></i> View Interactive AIMST Campus Map</button>"
+    }
+  ],
+  "chatHistory": [
+    {
+      "id": "sess-1001",
+      "studentId": "B25030023",
+      "studentName": "Kavyasre Kobinathan",
+      "turns": 4,
+      "lastQuestion": "When is my exam timetable?",
+      "timestamp": "2026-08-17 15:13"
+    }
+  ],
+  "feedbackLogs": [
+    {
+      "id": "fb-1",
+      "studentId": "B25030023",
+      "rating": 5,
+      "comment": "Super fast and helpful! Saved me a trip to SAD office.",
+      "timestamp": "2026-08-17 15:13"
+    }
+  ]
+}
